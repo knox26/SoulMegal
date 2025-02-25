@@ -77,7 +77,7 @@ function VideoFrameSender() {
   const remoteVideoRef = useRef();
   const iceCandidatesQueue = useRef([]);
   const sendersPC = useRef(null);
-  const recieversPC = useRef(null);
+
 
   useEffect(() => {
     if (match) {
@@ -209,7 +209,7 @@ function VideoFrameReciever() {
   const remoteVideoRef = useRef();
   const localVideoRef = useRef();
   const iceCandidatesQueue = useRef([]);
-  const recieversPC = useRef(null);
+ 
   const sendersPC = useRef(null);
 
   useEffect(() => {

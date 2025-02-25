@@ -49,7 +49,6 @@ const MessageInput = () => {
         <button
           type="submit"
           className="bg-gray-500 hover:bg-gray-600 p-2.5 flex justify-center items-center rounded-full"
-          disabled={!watch("text")}
         >
           <Send size={22} className="-mb-0.5 -ml-0.5" />
         </button>

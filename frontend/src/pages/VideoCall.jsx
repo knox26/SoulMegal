@@ -88,7 +88,19 @@ function VideoFrameSender() {
         sendersPC.current = new RTCPeerConnection({
           iceServers: [
             { urls: "stun:stun.l.google.com:19302" },
+            { urls: "stun:stun1.l.google.com:19302" },
+            { urls: "stun:stun2.l.google.com:19302" },
+            { urls: "stun:stun3.l.google.com:19302" },
+            { urls: "stun:stun4.l.google.com:19302" },
             { urls: "stun:global.stun.twilio.com:3478" },
+            { urls: "stun:stun.services.mozilla.com" },
+            { urls: "stun:stun.stunprotocol.org" },
+            { urls: "stun:stun.voipstunt.com" },
+            { urls: "stun:stunserver.org" },
+            { urls: "stun:stun.ekiga.net" },
+            { urls: "stun:stun.sipgate.net" },
+            { urls: "stun:stun.ideasip.com" },
+            { urls: "stun:stun.counterpath.com" },
           ],
         });
 
@@ -221,7 +233,19 @@ function VideoFrameReciever() {
         sendersPC.current = new RTCPeerConnection({
           iceServers: [
             { urls: "stun:stun.l.google.com:19302" },
+            { urls: "stun:stun1.l.google.com:19302" },
+            { urls: "stun:stun2.l.google.com:19302" },
+            { urls: "stun:stun3.l.google.com:19302" },
+            { urls: "stun:stun4.l.google.com:19302" },
             { urls: "stun:global.stun.twilio.com:3478" },
+            { urls: "stun:stun.services.mozilla.com" },
+            { urls: "stun:stun.stunprotocol.org" },
+            { urls: "stun:stun.voipstunt.com" },
+            { urls: "stun:stunserver.org" },
+            { urls: "stun:stun.ekiga.net" },
+            { urls: "stun:stun.sipgate.net" },
+            { urls: "stun:stun.ideasip.com" },
+            { urls: "stun:stun.counterpath.com" },
           ],
         });
 

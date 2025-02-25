@@ -6,7 +6,7 @@ import { useChatStore } from "@/store/useChatStore";
 
 function VideoCall() {
   const { authUser, match, setMatch, socket, role, setRole } = useAuthStore();
-   const { setMessagesNull } = useChatStore();
+  const { setMessagesNull } = useChatStore();
   useEffect(() => {
     socket.on("match-found", ({ match, role }) => {
       console.log(`my role is ${role} and matched with`, match);
@@ -17,7 +17,8 @@ function VideoCall() {
     socket.on("ended-call", ({ msg }) => {
       if (msg === "call ended") {
         setMatch(null);
-        setMessagesNull()
+        setMessagesNull();
+        setRole(null);
         console.log("call ended by next person");
       }
     });
@@ -31,7 +32,8 @@ function VideoCall() {
     socket.emit("end-call", { to: match, msg: "call ended" });
     console.log("call ended by me");
     setMatch(null);
-    setMessagesNull()
+    setMessagesNull();
+    setRole(null);
   };
 
   return (
@@ -57,9 +59,11 @@ function VideoCall() {
           {role === "caller" && <VideoFrameSender />}
           {role === "reciever" && <VideoFrameReciever />}
         </div>
-        {match &&<div className="h-[75vh] mx-2 md:mx-0 md:w-[55vw] bg-gray-900 rounded-xl md:mt-2.5">
-          <Chat />
-        </div>}
+        {match && (
+          <div className="h-[75vh] mx-2 md:mx-0 md:w-[55vw] bg-gray-900 rounded-xl md:mt-2.5">
+            <Chat />
+          </div>
+        )}
       </div>
     </div>
   );

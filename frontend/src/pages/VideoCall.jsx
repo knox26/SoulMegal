@@ -57,9 +57,9 @@ function VideoCall() {
           {role === "caller" && <VideoFrameSender />}
           {role === "reciever" && <VideoFrameReciever />}
         </div>
-        <div className="h-[75vh] mx-2 md:mx-0 md:w-[55vw] bg-gray-900 rounded-xl md:mt-2.5">
-          {match && <Chat />}
-        </div>
+        {match &&<div className="h-[75vh] mx-2 md:mx-0 md:w-[55vw] bg-gray-900 rounded-xl md:mt-2.5">
+          <Chat />
+        </div>}
       </div>
     </div>
   );

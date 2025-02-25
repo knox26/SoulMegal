@@ -3,9 +3,11 @@ import VoiceRecorder from "../components/VoiceRecorder.jsx"; // Import the Voice
 
 function HomePage() {
   return (
-    <div className="p-20 flex flex-col items-center justify-center h-full">
-      <h1 className="text-6xl mb-10">Record Your Interest</h1>
-      <VoiceRecorder /> {/* Add the VoiceRecorder component */}
+    <div className="p-20 flex flex-col items-center justify-center h-screen w-screen ">
+      <h1 className="text-3xl md:text-6xl mb-3 md:mb-10 w-full text-center">
+        Record Your Interest
+      </h1>
+      <VoiceRecorder />
     </div>
   );
 }

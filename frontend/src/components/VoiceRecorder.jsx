@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Mic, StopCircle } from "lucide-react"; // Import icons from lucide-react
 import useIntrestStore from "../store/useIntrestStore.js"; // Import the Zustand store
 import { useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
@@ -54,12 +54,14 @@ const VoiceRecorder = () => {
     if (responseStatus === 200) {
       navigate("/videocall"); // Navigate to the video call page
     }
-  };
-
+  }; 
+  const handleSkip= ()=>{
+    navigate("/videocall");
+  }
   const audioURL = useIntrestStore((state) => state.audioURL);
 
   return (
-    <div className="p-4 max-w-lg mx-auto">
+    <div className="p-4 w-full md:max-w-lg ">
       <div className="flex items-center justify-center">
         {!recording ? (
           <button
@@ -89,6 +91,15 @@ const VoiceRecorder = () => {
           </button>
         </div>
       )}
+      <div className="flex flex-col justify-center items-center w-full mt-5 ">
+        <p className="text-lg text-center md:text-xl">if you have recorded your Intrest in past then skip</p>
+        <button
+            onClick={handleSkip}
+            className="flex items-center justify-center px-8 py-2 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-700 hover:to-orange-700 text-white rounded-2xl mt-5"
+          >
+            Skip
+          </button>
+      </div>
     </div>
   );
 };

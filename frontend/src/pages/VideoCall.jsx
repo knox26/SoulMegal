@@ -37,7 +37,7 @@ function VideoCall() {
   };
 
   return (
-    <div className="pt-20 flex flex-col justify-center items-center">
+    <div className="pt-20 flex flex-col justify-center items-center h-screen">
       <div className=" flex justify-center md:gap-5 gap-2 items-center">
         <button
           className="px-5 py-2 rounded-2xl bg-gradient-to-r from-emerald-400 to-cyan-400 hover:from-emerald-700 hover:to-cyan-700"

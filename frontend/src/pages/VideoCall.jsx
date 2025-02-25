@@ -37,7 +37,11 @@ function VideoCall() {
   };
 
   return (
-    <div className="pt-20 flex flex-col justify-center items-center h-screen">
+    <div
+      className={`pt-20 flex flex-col justify-center items-center ${
+        match ? "" : "h-screen"
+      }`}
+    >
       <div className=" flex justify-center md:gap-5 gap-2 items-center">
         <button
           className="px-5 py-2 rounded-2xl bg-gradient-to-r from-emerald-400 to-cyan-400 hover:from-emerald-700 hover:to-cyan-700"
@@ -77,7 +81,6 @@ function VideoFrameSender() {
   const remoteVideoRef = useRef();
   const iceCandidatesQueue = useRef([]);
   const sendersPC = useRef(null);
-
 
   useEffect(() => {
     if (match) {
@@ -209,7 +212,7 @@ function VideoFrameReciever() {
   const remoteVideoRef = useRef();
   const localVideoRef = useRef();
   const iceCandidatesQueue = useRef([]);
- 
+
   const sendersPC = useRef(null);
 
   useEffect(() => {

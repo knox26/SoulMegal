@@ -142,7 +142,7 @@ function VideoFrameSender() {
 
         const stream = await navigator.mediaDevices.getUserMedia({
           video: true,
-          audio: false,
+          audio: true,
         });
 
         stream
@@ -275,7 +275,7 @@ function VideoFrameReciever() {
 
         const stream = await navigator.mediaDevices.getUserMedia({
           video: true,
-          audio: false,
+          audio: true,
         });
 
         stream
